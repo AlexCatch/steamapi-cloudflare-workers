@@ -1,7 +1,7 @@
-const { createDeflate, createGunzip } = require('zlib');
+const { createDeflate, createGunzip } = require('browserify-zlib');
 const { parse } = require('url');
-const https = require('https');
-const http = require('http');
+const https = require('https-browserify');
+const http = require('stream-http');
 const reg = /<h1>(.*)<\/h1>/;
 
 module.exports = (url, { headers } = {}) => {
