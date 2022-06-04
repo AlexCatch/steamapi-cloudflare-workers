@@ -12,14 +12,14 @@
 ## Setup
 ### Installation
 ```
-npm i steamapi
+npm i steamapi-webpack-5-fork
 ```
 ### Getting an API Key
 Once signed into Steam, head over to http://steamcommunity.com/dev/apikey to generate an API key.
 ### Usage
 First, we start by making a SteamAPI "user".
 ```js
-const SteamAPI = require('steamapi');
+import SteamAPI from 'steamapi-webpack-5-fork';
 const steam = new SteamAPI('steam token');
 ```
 Now, we can call methods on the `steam` object.
