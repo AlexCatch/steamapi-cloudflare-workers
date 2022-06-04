@@ -192,6 +192,7 @@ declare namespace SteamAPI {
       enabled?: boolean;
       expires?: number;
       disableWarnings?: boolean;
+      corsOrigin?: string;
   }
 
   interface App {
