@@ -40,7 +40,10 @@ class SteamAPI {
 		this.key = key;
 		this.baseAPI = 'https://api.steampowered.com';
 		this.baseStore = 'https://store.steampowered.com/api';
-		this.headers = { 'User-Agent': `SteamAPI/${version} (https://www.npmjs.com/package/${name})` };
+		this.headers = { 
+			'User-Agent': `SteamAPI/${version} (https://www.npmjs.com/package/${name})`,
+			'Access-Control-Allow-Origin': '*',
+		};
 		this.options = { enabled, expires, disableWarnings };
 		this.resolveCache = new Map();
 		if (enabled) this.cache = new Map();

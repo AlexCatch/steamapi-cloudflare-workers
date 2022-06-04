@@ -1,9 +1,9 @@
 {
-	"author": "xDimGG <dimggyt@gmail.com> (https://dim.codes)",
+	"author": "xDimGG <dimggyt@gmail.com>",
 	"name": "steamapi-webpack-5-fork",
 	"description": "A nice Steam API wrapper.",
 	"main": "index.js",
-	"version": "2.2.5",
+	"version": "2.3.1",
 	"license": "MIT",
 	"scripts": {
 		"test": "node test/test.js"
