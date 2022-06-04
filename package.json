@@ -3,7 +3,7 @@
 	"name": "steamapi-webpack-5-fork",
 	"description": "A nice Steam API wrapper.",
 	"main": "index.js",
-	"version": "2.2.1",
+	"version": "2.2.2",
 	"license": "MIT",
 	"eslintConfig": {
 		"extends": "eslint-config-dim"
