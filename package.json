@@ -3,8 +3,11 @@
 	"name": "steamapi-webpack-5-fork",
 	"description": "A nice Steam API wrapper.",
 	"main": "index.js",
-	"version": "2.2.4",
+	"version": "2.2.5",
 	"license": "MIT",
+	"scripts": {
+		"test": "node test/test.js"
+	},
 	"eslintConfig": {
 		"extends": "eslint-config-dim"
 	},
@@ -27,7 +30,7 @@
 		"eslint-config-dim": "github:xDimGG/eslint-config-dim"
 	},
 	"dependencies": {
-		"fetch-polyfill": "^0.8.2",
+		"axios": "^0.27.2",
 		"steamid": "^2.0.0"
 	}
 }
