@@ -18,6 +18,5 @@
   },
   "files": [
       "index.d.ts",
-      "steamapi-tests.ts"
   ]
 }

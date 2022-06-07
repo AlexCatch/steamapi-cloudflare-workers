@@ -17,16 +17,20 @@ npm i steamapi
 ### Getting an API Key
 Once signed into Steam, head over to http://steamcommunity.com/dev/apikey to generate an API key.
 ### Usage
-First, we start by making a SteamAPI "user".
+First, we start by making a SteamAPI "user". (The URLs shown below are the defaults and can be omitted, however for webapps, it may be useful to set up a proxy server to bypass CORS restrictions)
 ```js
-const SteamAPI = require('steamapi');
-const steam = new SteamAPI('steam token');
+import SteamAPI from 'steamapi-webpack-5-fork';
+const steamClient = new SteamAPI(steamWebApiKey, { 
+	baseURL: 'https://api.steampowered.com', 
+	baseStoreURL: 'https://store.steampowered.com/api'
+	headers: {}
+});
 ```
-Now, we can call methods on the `steam` object.
+Now, we can call methods on `SteamAPI`.
 
 For example, let's retrieve the SteamID64 of a user. SteamAPI provides a `resolve` method, which accepts URLs and IDs.
 ```js
-steam.resolve('https://steamcommunity.com/id/DimGG').then(id => {
+SteamAPI.resolve('https://steamcommunity.com/id/DimGG').then(id => {
 	console.log(id); // 76561198146931523
 });
 ```

@@ -35,15 +35,15 @@ class SteamAPI {
 	 * @param {boolean} [options.enabled=true] Whether caching is enabled
 	 * @param {number} [options.expires=86400000] How long cache should last for in ms (1 day by default)
 	 * @param {boolean} [options.disableWarnings=false] Whether to suppress warnings
-	 * @param {string} [options.corsOrigin=http://localhost:4200/] When you provision your API key, steam will ask you for an origin/domain. This is importaint when running from web.
+	 * @param {string} [options.baseURL=https://api.steampowered.com] You may need to proxy requests through a different base url in order to get around CORS.
+	 * @param {string} [options.baseStoreURL=https://store.steampowered.com/api] You may need to proxy requests through a different base url in order to get around CORS.
+	 * @param {Object} [options.headers={}] Custom headers JSON object
 	 */
-	constructor(key, { enabled = true, expires = 86400000, disableWarnings = false, corsOrigin = 'http://localhost:4200/' } = {}) {
+	constructor(key, { enabled = true, expires = 86400000, disableWarnings = false, baseURL = 'https://api.steampowered.com', baseStoreURL = 'https://store.steampowered.com/api', headers = {} } = {}) {
 		this.key = key;
-		this.baseAPI = 'https://api.steampowered.com';
-		this.baseStore = 'https://store.steampowered.com/api';
-		this.headers = {
-			'Access-Control-Allow-Origin': corsOrigin,
-		};
+		this.baseAPI = baseURL;
+		this.baseStore = baseStoreURL;
+		this.headers = headers;
 		this.options = { enabled, expires, disableWarnings };
 		this.resolveCache = new Map();
 		if (enabled) this.cache = new Map();
