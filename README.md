@@ -20,15 +20,11 @@ Once signed into Steam, head over to http://steamcommunity.com/dev/apikey to gen
 First, we start by making a SteamAPI "user". (The URLs shown below are the defaults and can be omitted, however for webapps, it may be useful to set up a proxy server to bypass CORS restrictions)
 ```js
 import SteamAPI from 'steamapi-webpack-5-fork';
-<<<<<<< HEAD
 const steamClient = new SteamAPI(steamWebApiKey, { 
 	baseURL: 'https://api.steampowered.com', 
 	baseStoreURL: 'https://store.steampowered.com/api'
 	headers: {}
 });
-=======
-const steam = new SteamAPI('steam token');
->>>>>>> d96d1e2ed1ede478e0e207a840c5c32736a4fd05
 ```
 Now, we can call methods on `SteamAPI`.
 
