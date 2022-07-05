@@ -3,7 +3,7 @@
 	"name": "steamapi-cloudflare-workers",
 	"description": "A nice Steam API wrapper for Cloudflare Workers",
 	"main": "index.js",
-	"version": "2.4.0",
+	"version": "2.5.0",
 	"license": "MIT",
 	"scripts": {
 		"test": "node test/test.js"
