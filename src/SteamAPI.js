@@ -12,8 +12,7 @@ const Server = require('./structures/Server');
 const Game = require('./structures/Game');
 
 const objectify = require('./utils/objectify');
-const axios = require('axios').default;
-const { version, name } = require('../package.json');
+const { name } = require('../package.json');
 const reApp = /^\d{1,7}$/;
 const reRegion = /^us|es|de|fr|ru|nz|au|uk$/i;
 const reID = /^\d{17}$/;
@@ -69,7 +68,12 @@ class SteamAPI {
 	 * @returns {Promise<Object>} JSON Response
 	 */
 	get(path, base = this.baseAPI, key = this.key) {
-		return axios.get(`${base}${path}${path.includes('?') ? '&' : '?'}key=${key}`, { headers: this.headers });
+		return fetch(`${base}${path}${path.includes('?') ? '&' : '?'}key=${key}`, { headers: this.headers }).then((response) => {
+			if (!response.ok) {
+				throw response;
+			}
+			return response.json();
+		});
 	}
 
 	/**
