@@ -1,25 +1,17 @@
-## SteamAPI
-<div align="center">
-	<p>
-		<a href="https://www.npmjs.com/package/steamapi"><img src="https://nodei.co/npm/steamapi.png?compact=true" alt="" /></a>
-	</p>
-	<p>
-		<a href="https://www.npmjs.com/package/steamapi"><img src="https://img.shields.io/npm/v/steamapi.svg?maxAge=3600" alt="NPM" /></a>
-		<a href="https://discord.dim.codes"><img src="https://img.shields.io/discord/204352669731520512.svg?maxAge=3600" alt="Discord" /></a>
-	</p>
-</div>
+## SteamAPI Cloudflare Workers
+A nice steam api wrapper that works on Cloudflare Workers
 
 ## Setup
 ### Installation
 ```
-npm i steamapi-webpack-5-fork
+npm i steamapi-cloudflare-workers
 ```
 ### Getting an API Key
 Once signed into Steam, head over to http://steamcommunity.com/dev/apikey to generate an API key.
 ### Usage
 First, we start by making a SteamAPI "user". (The URLs shown below are the defaults and can be omitted, however for webapps, it may be useful to set up a proxy server to bypass CORS restrictions)
 ```js
-import SteamAPI from 'steamapi-webpack-5-fork';
+import SteamAPI from 'steamapi-cloudflare-workers';
 const steamClient = new SteamAPI(steamWebApiKey, { 
 	baseURL: 'https://api.steampowered.com', 
 	baseStoreURL: 'https://store.steampowered.com/api'
